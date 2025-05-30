@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisah Gerak Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kisah Gerak Nusantara</h1>
+
+        <div id="game-intro" class="screen active">
+            <p>Seberapa jauh Anda mengenal tarian daerah Indonesia hanya dari ciri khasnya?</p>
+            <button id="start-game-btn">Mulai Bermain</button>
+        </div>
+
+        <div id="difficulty-selection" class="screen">
+            <h2>Pilih Tingkat Kesulitan</h2>
+            <div class="difficulty-buttons">
+                <button data-difficulty="mudah">Mudah</button>
+                <button data-difficulty="sedang">Sedang</button>
+                <button data-difficulty="sulit">Sulit</button>
+            </div>
+            <button class="menu-btn">Menu Utama</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <h2>Tebak Nama Tarian!</h2>
+            <p id="quiz-description"></p>
+            <input type="text" id="player-answer" placeholder="Ketik nama tarian di sini">
+            <button id="submit-answer-btn">Jawab</button>
+            <div id="hint-area">
+                <button id="show-hint-btn">Minta Petunjuk (-10 Poin)</button>
+                <p id="hint-text"></p>
+            </div>
+            
+            <p id="quiz-feedback"></p>
+            <p id="current-score">Skor: 0</p>
+            <p id="question-progress">Soal 1 dari 10</p>
+            <button id="next-quiz-btn" class="hidden">Lanjut</button>
+            <button class="menu-btn">Menu Utama</button>
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h2>Permainan Selesai!</h2>
+            <p>Skor Akhir Anda: <span id="final-score">0</span></p>
+            <h3>Tarian yang Berhasil Ditebak:</h3>
+            <ul id="guessed-dances">
+                </ul>
+            <button id="restart-game-btn">Main Lagi</button>
+            <button class="menu-btn">Menu Utama</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
